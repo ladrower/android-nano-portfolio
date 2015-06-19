@@ -47,24 +47,28 @@ public class MainActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void onLaunchSpotify(View view) {
-        showToast("This will launch Spotify App");
-    }
-
-    public void onLaunchScores(View view) {
-        showToast("This will launch Scores App");
-    }
-    public void onLaunchLibrary(View view) {
-        showToast("This will launch Library App");
-    }
-    public void onLaunchBuildItBigger(View view) {
-        showToast("This will launch Build It Bigger App");
-    }
-    public void onLaunchReader(View view) {
-        showToast("This will launch Reader App");
-    }
-    public void onLaunchMyApp(View view) {
-        showToast("This will launch My App");
+    public void onLaunchClick(View view) {
+        view.getId();
+        switch (view.getId()) {
+            case R.id.buttonSpotify:
+                showToast("This will launch Spotify App");
+                break;
+            case R.id.buttonScores:
+                showToast("This will launch Scores App");
+                break;
+            case R.id.buttonLibrary:
+                showToast("This will launch Library App");
+                break;
+            case R.id.buttonBuildItBigger:
+                showToast("This will launch Build It Bigger App");
+                break;
+            case R.id.buttonReader:
+                showToast("This will launch Reader App");
+                break;
+            case R.id.buttonMyApp:
+                showToast("This will launch My App");
+                break;
+        }
     }
 
     protected void showToast(String text) {
